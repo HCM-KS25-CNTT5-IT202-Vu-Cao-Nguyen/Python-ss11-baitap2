@@ -1,0 +1,20 @@
+dictionary emloyee gồm những key như là: employee_id, full_name, department, status
+employee_id = employee[0] dòng này báo lỗi là vì trong dic từ khóa là các chuỗi nên khi truy cập không thể tìm thấy phần 0 nào cả
+
+
+Dictionary không  truy cập phần tử bằng index giống list
+Muốn lấy mã nhân viên "NV001", cần viết lệnh employee_id = employee["employee_id"]
+
+full_name = employee["name"] gây lỗi là vì trong dictionary không có key "name".
+
+Key đúng để lấy họ tên nhân viên là full_name = employee["full_name"]
+
+employee["employee_status"] = "official" lệnh này không cập nhập key cũ status mà nó tạo thêm một key mới
+
+Nếu muốn cập nhập trạng thái nhân viên chúng ta dùng key status
+
+employee.append("base_salary", 15000000) dòng này gây lỗi vì append chỉ dùng cho list
+Dictionary không có phương thức append mà thêm dữ liệu bằng cách gán các key mới
+
+Muốn thêm lương cơ bản base_salary = 15000000, cần viết lệnh employee["base_salary"] = 15000000
+
